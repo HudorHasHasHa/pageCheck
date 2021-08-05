@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/fontello/css/fontello.css">
+  <title>Taskinio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Noto+Sans&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script type="module" src="js/script.js"></script>
+</head>
+<body>
+  <section class="top-bar row mobile-top-bar">
+    <div class="col-sm-6 col-md-3 top-bar-logo">
+      <img class="col-sm-12" src="./images/logo.svg"/>
+    </div>
+    <div class="col-sm-6 col-md-9 row top-bar-icons-wrapper">
+        <div class="top-bar-icons"><a href="#"><img src="./images/fontello/search.svg"/></a></div>
+        <div class="top-bar-icons"><a href="#"><img src="./images/fontello/basket.svg"/></a></div>
+        <div class="top-bar-hamburger"><a href="#"><i class="demo-icon icon-menu"></i></a></div>
+    </div>
+    <div class="desktop-top-bar row  col-md-8">
+      <div class="search row">
+        <input class="col-sm-9" type="text" name="search" placeholder="Wyszukaj..."/>
+        <a class="search-icon col-sm-2"><img src="./images/fontello/search.svg"/></a>
+      </div>
+      <a href="#">Zaloguj się</a>
+      <a href="#">Lista zakupowa</a>
+
+      <div class="menu-basket">
+        <a class="cart-button" href="#">
+          <img src="./images/fontello/basket.svg"/>
+          <span id="total-price">0.00 zł</span>
+        </a>
+        <div class="cart-dropdown">
+          <div class="cart-dropdown-wrapper">
+            <ul id="cart-dropdown-items" class="cart-dropdown-items">
+            </ul>
+          </div>
+          <div class="cart-dropdown-header">
+            <div class="shopping-cart-total">
+              <span>Do zapłaty:</span>
+              <span id="total-price">0.00 zł</span>
+            </div>
+          </div>
+          <a href="#" class="dropdown-button">Podsumowanie<i class="fa fa-chevron-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <nav class="desktop-nav">
+    <div class="row">
+      <div class="desktop-nav-list col-md-12 row">
+          <a href="#">DOM</a>
+          <a href="#">DZIECKO</a>
+          <a href="#">ELEKTRONIKA</a>
+          <a href="#">KUCHNIA</a>
+          <a href="#">PREZENT</a>
+          <a href="#">NARZĘDZIA I BHP</a>
+          <a href="#">WYPRZEDAŻ</a>
+      </div>
+    </div>
+  </nav>
+  <nav class="navigation row">
+    <div class="mobile-navigation row">
+      <a class=""><i class="demo-icon icon-left-open-mini"></i> Wstecz</a>
+      <div class="border"></div>
+      <div class="row nav-links">
+        <p>Jesteś tutaj: &nbsp;</p>
+        <a href="#"><u>Czujniki ruchu alarmowe</u></a>
+        <i class="demo-icon icon-right-open"></i>
+        <p>Wynik</p>
+      </div>
+    </div>
+    <div class="desktop-navigation row col-md-10">
+      <div class="row desktop-navigation-link">
+        <div><a href="#">Strona główna</a></div>
+        <div><a>/</a></div>
+      </div>
+      <div class="row desktop-navigation-link">
+        <div><a href="#">Dziecko</a></div>
+        <div><a>/</a></div>
+      </div>
+      <div class="row desktop-navigation-link">
+        <div><a href="#">Zastawa stołowa</a></div>
+        <div><a>/</a></div>
+      </div>
+      <div class="row desktop-navigation-link">
+        <div><a href="#">Bambusowe naczynia dla dzieci</a></div>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid mobile-container-fluid ">
+    <section class="row product"> 
+      <div class="row col-sm-12 col-md-8 product-left-wrapper">
+        <div class="gallery col-md-2">
+            <div class="gallery-1 col-md-12"></div>
+            <div class="gallery-2 col-md-12"></div>
+            <div class="gallery-3 col-md-12"></div>
+            <div class="gallery-4 col-md-12"></div>
+            <div class="gallery-5 col-md-12"></div>
+        </div>
+        <div id="product-left" class="product-left col-sm-12 col-md-10"></div>
+      </div>
+      <div class="product-right col-sm-12 col-md-4 col-xl-4">
+        <div class="product-header">
+          <div class="row desktop-product-header">
+            <div class="col-md-5 image"><img class="col-md-12" src="./images/Image 1.svg"></div>
+            <h2 class="col-md-7">
+              Bambusowe Naczynia dla Dzieci Ambition Junior Alex
+            </h2>
+          </div>
+          <p>5904134571342</p>
+        </div>
+        <div class="colors-row">
+          <h3>Kolory</h3>
+          <div class="colors row col-sm-12 col-md-12">
+              <div class="color-outer">
+                <div class="color-a">
+                </div>
+              </div>
+              <div class="color-outer">
+                <div class="color-b">
+                </div>
+              </div>
+              <div class="color-outer">
+                <div class="color-c">
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="availability">
+          <h4>Dostępne 3 szt w magazynie</h4>
+          <a>Sprawdz czas i koszt dostawy</a>
+        </div>
+        <div class="price">
+          <h3>29,00</h3>
+          <p>zł/szt.</p>
+          <p class="old-price">39,00 zł</p>
+          <div class="promocja"><h4>PROMOCJA</h4></div>
+        </div>
+        <div class="row installments">
+          <a>kup na raty</a>
+        </div>
+        <div class="row add-to-cart"> 
+          <div class="col-sm-2 quantity">
+            <input id="quantity-item1" value="1" min="1" max="9" type="number">
+          </div>
+          <a id="button-item1" href="#" class="add-to-cart-button col-sm-9">
+            DODAJ DO KOSZYKA
+          </a>
+        </div>
+        <div class="add-to-wish-list">
+          <a>Do listy zakupowej</a>
+        </div>
+        <div class="product-footer">
+          <div class="row">
+            <img src="./images/fontello/Group 4320.svg"/>
+            <p><b>Łatwy zwrot towaru</b> w ciągu 14 dni</p>
+          </div>
+          <div class="row">
+            <img src="./images/fontello/box (2).svg"/>
+            <p><b>Darmowa dostawa</b> od 599 zł</p>
+          </div>
+          <div class="row shipped">
+            <img src="./images/fontello/shipped (2).svg"/>
+            <p><b>Szybka dostawa w 48h</b></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="items-available row">
+      <div class="row col-sm-12 col-md-12 items-available-header"><h3>Dostępne warianty</h3></div>
+      <div class="row available-item col-sm-12 col-md-3 available-md-border">
+        <div id="item1-img" class="item-image col-sm-4 col-md-4"></div>
+        <div class="item-description col-sm-8 col-md-8">
+          <p id="item1-title"></p>
+          <div class="row availability-count">
+            <div class="green-dot"></div>
+            <p>Dostępne <p id="item1-quantity"></p> szt.</p>
+          </div>
+          <p><b id="item1-price"></b></p>
+          <div class="row to-cart"> 
+            <div class="col-sm-4 quantity-2">
+              <input id="quantity-item2"  value="1" min="1" max="9" type="number">
+            </div>
+            <a id="button-item1" href="#" class="to-cart-button col-sm-8 col-md-8">
+              DO KOSZYKA
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row available-item col-sm-12 col-md-3 available-md-border">
+        <div id="item2-img" class=" item-image col-sm-4"></div>
+        <div class="item-description col-sm-8">
+          <p id="item2-title"></p>
+          <div class="row availability-count">
+            <div class="green-dot"></div>
+            <p>Dostępne <p id="item2-quantity"></p> szt.</p>
+          </div>
+          <p><b id="item2-price"></b></p>
+          <div class="row to-cart"> 
+            <div class="col-sm-4 quantity-2">
+              <input id="quantity-item3"  value="1" min="1" max="9" type="number">
+            </div>
+            <a id="button-item2" href="#" class="to-cart-button col-sm-8">
+              DO KOSZYKA
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row available-item col-sm-12 col-md-3">
+        <div id="item3-img" class="item-image col-sm-4"></div>
+        <div class="item-description col-sm-8">
+          <p id="item3-title"></p>
+          <div class="row availability-count">
+            <div class="green-dot"></div>
+            <p>Dostępne <p id="item3-quantity"></p> szt.</p>
+          </div>
+          <p><b id="item3-price"></b></p>
+          <div class="row to-cart"> 
+            <div class="col-sm-4 quantity-2">
+              <input id="quantity-item4"  value="1" min="1" max="9" type="number">
+            </div>
+            <a id="button-item3" href="#" class="to-cart-button col-sm-8">
+              DO KOSZYKA
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="container-fluid-2 mobile-container-fluid ">
+    <section class="package-section">
+      <div class="package-header">
+        <h2>W zestawie kupisz taniej</h2>
+      </div>
+      <div class="row col-md-12 package-content">
+        <div class="package-images col-sm-12 row col-md-6">
+          <div class="package-item-1 col-sm-4 col-md-5"></div>
+          <div><a class="plus-sign">+</a></div>
+          <div class="package-item-2 col-sm-4 col-md-5"></div>
+        </div>
+        <div class="col-md-5 col-sm-12 row">
+          <div class="package-description col-sm-12 col-md-6">
+            <div class="package-description-inner">
+              <p>Cena produktów poza zestawem 199,00 zł</p>
+              <h3>149,00 / zestaw</h3>
+            </div>
+          </div>
+          <a href="#" class="row col-sm-6 check-offer-button col-md-5"> 
+            <b>ZOBACZ OFERTĘ</b>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="description-section row">
+      <div class="description-image col-md-5"></div>
+      <div class="col-md-6">
+        <div class="description-header">
+          <h2>Zestaw naczyń bambusowych dla dzieci Alex AMBITION JUNIOR</h2>
+        </div>
+        <div class="description-content">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, unde possimus! Facilis voluptatem, ut consequuntur veniam sed quis fuga consectetur deserunt labore accusantium, perspiciatis nulla earum ipsum veritatis autem tempora neque fugit. Culpa porro est nostrum!<br/><br/>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error laboriosam voluptate quos quod animi odio!<br/><br/>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis temporibus officia.<br/><br/>
+            Lorem ipsum dolor sit amet consectetur.<br/><br/>
+            W skład zestawu wchodzą 3 elementy:<br/><br/>
+            talerz: 21cm<br/>
+            miska: 360ml<br/>
+            kubek: 180ml<br/><br/>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, ratione, harum quae quam ut maxime facilis architecto cum impedit eos eligendi laboriosam assumenda consequatur laborum?<br/>
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="specifications-section">
+      <div class="section-header">
+        <h2>Specyfikacja</h2>
+      </div>
+      <div class="specifications-content">
+        <div class="row spec-wrapper">
+          <div class="col-sm-6 col-md-3 key row"><p>Producent:</p></div>
+          <div class="col-sm-6 col-md-3 value row"><p>Ambition</p></div>
+        </div>
+        <div class="row spec-wrapper">
+          <div class="col-sm-6 col-md-3 key row"><p>Gwarancja:</p></div>
+          <div class="col-sm-6 col-md-3 value row"><p><b>2 lata</b></p></div>
+        </div>
+        <div class="row spec-wrapper">
+          <div class="col-sm-6 col-md-3 key row"><p>Przeznaczenie</p></div>
+          <div class="col-sm-6 col-md-3 value row"><p><b>przedszkola, dzieci żłobkowe</b></p></div>
+        </div>
+        <div class="row spec-wrapper">
+          <div class="col-sm-6 col-md-3 key row"><p>Wymiar</p></div>
+          <div class="col-sm-6 col-md-3 value row"><p><b>33m2 (aham cadr - 15m2)</b></p></div>
+        </div>
+        <div class="row spec-wrapper">
+          <div class="col-sm-6 col-md-3 key row"><p>Materiał</p></div>
+          <div class="col-sm-6 col-md-3 value row"><p><b>aluminium</b></p></div>
+        </div>
+        <div class="row spec-wrapper">
+          <div class="col-sm-6 col-md-3 key row"><p>Zużycie energii (w)</p></div>
+          <div class="col-sm-6 col-md-3 value row"><p><b>4-40</b></p></div>
+        </div>
+        <div class="row spec-wrapper">
+          <div class="col-sm-6 col-md-3 key row"><p>Zasilanie</p></div>
+          <div class="col-sm-6 col-md-3 value row"><p><b>230v/50hz</b></p></div>
+        </div>
+        <div class="row spec-wrapper">
+          <div class="col-sm-6 col-md-3 key row"><p>Ilość trybów pracy</p></div>
+          <div class="col-sm-6 col-md-3 value row"><p><b>4</b></p></div>
+        </div>
+        <div class="row spec-wrapper">
+          <div class="col-sm-6 col-md-3 key row"><p>Czujnik ruchu</p></div>
+          <div class="col-sm-6 col-md-3 value row"><p><b>z czujnikiem</b></p></div>
+        </div>
+        <div class="row downloads">
+          <div class="row col-lg-2 col-md-2 col-sm-12">
+            <div class="col-sm-12 download"><p><b>Pliki do pobrania:</b></p></div>
+          </div>
+          <div class="row  col-lg-4 col-md-5 col-sm-12">
+            <div class="col-sm-6 col-md-6 download-link">
+              <a>
+                <img src="./images/fontello/download.svg"/>
+                <u>Katalog producenta</u>
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-6 download-link">
+              <a>
+                <img src="./images/fontello/download.svg"/>
+                <u>Instrukcja obsługi</u>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="container-fluid mobile-container-fluid-2 ">
+    <section class="bestsellers-section">
+      <div class="section-header">
+        <h2>Zobacz Podobne</h2>
+      </div>
+      <div class="bestsellers-content col-md-12 row">
+        <div class="row col-md-6">
+          <div class="col-sm-5 bestseller-item">
+            <div class="bestseller-image-a">
+            </div>
+            <div class="bestseller-description">
+              <p>Bambusowe Naczynia dla Dzieci Ambition Junior Mimi</p>
+              <p><b>129,00 zł</b></p>
+            </div>
+          </div>
+          <div class="col-sm-5 bestseller-item">
+            <div class="bestseller-image-b">
+            </div>
+            <div class="bestseller-description">
+              <p>Bambusowe Naczynia dla Dzieci Ambition Junior Mimi</p>
+              <p><b>129,00 zł</b></p>
+            </div>
+          </div>
+        </div>
+        <div class="row col-md-6">
+          <div class="col-sm-5 bestseller-item">
+            <div class="bestseller-image-c">
+            </div>
+            <div class="bestseller-description">
+              <p>Bambusowe Naczynia dla Dzieci Ambition Junior Mimi</p>
+              <p><b>129,00 zł</b></p>
+            </div>
+          </div>
+          <div class="col-sm-5 bestseller-item">
+            <div class="bestseller-image-a">
+            </div>
+            <div class="bestseller-description">
+              <p>Bambusowe Naczynia dla Dzieci Ambition Junior Mimi</p>
+              <p><b>129,00 zł</b></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="container-fluid-2 mobile-container-fluid ">
+    <section class="frequently-asked-questions">
+      <div class="frequently-asked-toggle">
+        <div class="questions-section-header">
+          <h3 class="col-sm-10 col-md-12">Nasi klienci najczęściej pytali o:</h3>
+          <div class="mobile-frequently-button"><a class="">+</a></div>
+        </div>
+        <div class="row frequently-dropdown ">
+          <div class="col-md-6">
+          <div>
+            <h3>Czy te miseczki mają atesty bezpieczeństwa?</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet libero nesciunt officia praesentium, animi maxime magni odit voluptatum perferendis placeat?</p>
+          </div>
+          <div>
+            <h3>Czy te produkty są 100% ekologiczne?</h3>
+          </div>
+          <div>
+            <h3>Czy miseczki nie uczulą 6 miesięcznego dziecka?</h3>
+          </div>
+        </div>
+        <div class="ask-question col-md-6 col-sm-12">
+          <div class="ask-question-inner-wrapper col-sm-12 col-md-10">
+            <h3>Masz pytanie na temat tego produktu?</h3>
+            <p>Nasi specjaliści chętnie udzielą Ci potrzebnych informacji.</p>
+            <a href="#" class="row col-sm-6 ask-question-button col-md-4"> 
+              <b>ZADAJ PYTANIE</b>
+            </a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <section class="reviews-section"> 
+      <div class="reviews-toggle">
+        <div class="reviews-section-header row">
+          <h3 class="col-sm-10 col-md-12">Opinie o miseczka bambusowa myszka dla dzieci</h3>
+          <div class="reviews-button"><a class="">+</a></div>
+        </div>
+        <div class="reviews-dropdown col-md-12">
+          <div class="reviews col-md-8">
+            <div class="review">
+              <div class="row rating">
+                <i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i>
+                <p>5/5</p>
+              </div>
+              <div class="review-wrapper">
+                <div class="start row"></div>
+                <p>Towar zgodny z opisem</p>
+                <div class="row review-info">
+                  <div class="col-md-5 review-info-personal">
+                    <p>22.01.2020 Wera, Szczecin, Polska</p>
+                  </div>
+                  <div class="row review-feedback col-sm-12 col-md-7">
+                    <h4>Czy ta opinia była pomocna?</h4>
+                    <a class="thumbs-up"><i class="demo-icon icon-thumbs-up-alt"></i>Tak(3)</a>
+                    <a><i class="demo-icon icon-thumbs-down"></i>Nie(0)</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="review">
+              <div class="row rating">
+                <i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i>
+                <p>5/5</p>
+              </div>
+              <div class="review-wrapper">
+                <div class="start row"></div>
+                <p>Towar zgodny z opisem</p>
+                <div class="row review-info">
+                  <div class="col-md-5 review-info-personal">
+                    <p>22.01.2020 Wera, Szczecin, Polska</p>
+                  </div>
+                  <div class="row review-feedback col-sm-12 col-md-7">
+                    <h4>Czy ta opinia była pomocna?</h4>
+                    <a class="thumbs-up"><i class="demo-icon icon-thumbs-up-alt"></i>Tak(3)</a>
+                    <a><i class="demo-icon icon-thumbs-down"></i>Nie(0)</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="review">
+              <div class="row rating">
+                <i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i>
+                <p>5/5</p>
+              </div>
+              <div class="review-wrapper">
+                <div class="start row"></div>
+                <p>Towar zgodny z opisem</p>
+                <div class="row review-info">
+                  <div class="col-md-5 review-info-personal">
+                    <p>22.01.2020 Wera, Szczecin, Polska</p>
+                  </div>
+                  <div class="row review-feedback col-sm-12 col-md-7">
+                    <h4>Czy ta opinia była pomocna?</h4>
+                    <a class="thumbs-up"><i class="demo-icon icon-thumbs-up-alt"></i>Tak(3)</a>
+                    <a><i class="demo-icon icon-thumbs-down"></i>Nie(0)</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="add-your-opinion col-md-4">
+            <div class="your-opinion-wrapper">
+              <div class="your-opinion-inner-wrapper">
+                <div class="row rating">
+                <i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i>
+                <p>4.5</p>
+              </div>
+              <div>
+                <p>Liczba wystawionych opinii: 3</p>
+                <a href="#" class="row rate-button">DODAJ SWOJĄ OPINIĘ</a>
+              </div>
+              <div class="ratings">
+                <div class="row">
+                  <p>5</p><i class="demo-icon icon-star"></i><progress max="100" value="72"></progress><p>(21)</p>
+                </div>
+                <div class="row">
+                  <p>4</p><i class="demo-icon icon-star"></i><progress max="100" value="30"></progress><p>(5)</p>
+                </div>
+                <div class="row">
+                  <p>3</p><i class="demo-icon icon-star"></i><progress max="100" value="0"></progress><p>(0)</p>
+                </div>
+                <div class="row">
+                  <p>2</p><i class="demo-icon icon-star"></i><progress max="100" value="0"></progress><p>(0)</p>
+                </div>
+                <div class="row">
+                  <p>1</p><i class="demo-icon icon-star"></i><progress max="100" value="4"></progress><p>(1)</p>
+                </div>
+              </div>
+
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="container-fluid mobile-container-fluid-2">
+    <section class="bestsellers-section">
+      <div class="section-header">
+        <h2>Bestsellery</h2>
+      </div>
+      <div class="bestsellers-content col-md-12 row">
+        <div class="row col-md-6">
+          <div class="col-sm-5 bestseller-item">
+            <div class="bestseller-image-a">
+            </div>
+            <div class="bestseller-description">
+              <p>Bambusowe Naczynia dla Dzieci Ambition Junior Mimi</p>
+              <p><b>129,00 zł</b></p>
+            </div>
+          </div>
+          <div class="col-sm-5 bestseller-item">
+            <div class="bestseller-image-b">
+            </div>
+            <div class="bestseller-description">
+              <p>Bambusowe Naczynia dla Dzieci Ambition Junior Mimi</p>
+              <p><b>129,00 zł</b></p>
+            </div>
+          </div>
+        </div>
+        <div class="row col-md-6">
+          <div class="col-sm-5 bestseller-item">
+            <div class="bestseller-image-c">
+            </div>
+            <div class="bestseller-description">
+              <p>Bambusowe Naczynia dla Dzieci Ambition Junior Mimi</p>
+              <p><b>129,00 zł</b></p>
+            </div>
+          </div>
+          <div class="col-sm-5 bestseller-item">
+            <div class="bestseller-image-a">
+            </div>
+            <div class="bestseller-description">
+              <p>Bambusowe Naczynia dla Dzieci Ambition Junior Mimi</p>
+              <p><b>129,00 zł</b></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+    <footer>
+      <div class="col-md-12 desktop-footer">
+        <div class="col-md-3">
+          <h3>Moje zamówienie</h3>
+          <ul>
+            <li><a href="#">Status zamówienia</a></li>
+            <li><a href="#">Śledzenie przesyłki</a></li>
+            <li><a href="#">Chcę zareklamować</a></li>
+            <li><a href="#">Chcę zwrócić towar</a></li>
+            <li><a href="#">Chcę wymienić towar</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h3>Moje Konto</h3>
+          <ul>
+            <li><a href="#">Zarejestruj się</a></li>
+            <li><a href="#">Moje zamówienie</a></li>
+            <li><a href="#">Koszyk</a></li>
+            <li><a href="#">Ulubione</a></li>
+            <li><a href="#">Historia transakcji</a></li>
+            <li><a href="#"> Moje rabaty</a></li>
+            <li><a href="#">Newsletter</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h3>Regulaminy</h3>
+          <ul>
+            <li><a href="#">Informacje o sklepie</a></li>
+            <li><a href="#">Wysyłka</a></li>
+            <li><a href="#">Sposoby płatności</a></li>
+            <li><a href="#">Regulamin</a></li>
+            <li><a href="#">Polityka prywatności</a></li>
+            <li><a href="#">Odstąpienie od umowy</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h3>Informacje</h3>
+          <div class="row logos">
+            <div class="row col-sm-4 col-md-6">
+              <div class="facebook col-sm-5"><a href="#"><img src="./images/fontello/facebook-circular-logo (2).svg"/></a></div>
+              <div class="instagram col-sm-5"><a href="#"><img src="./images/fontello/instagram (7).svg"/></a></div>
+            </div>
+          </div>
+          <div class="contact col-sm-12 col-md-12">
+            <h3>575848808</h3>
+            <h3>sklep@filikos.pl</h3>
+            <p>pn-pt 8:00-16:00 <br>sb 8:00-14:00</p>
+          </div>
+          <div class="partners-icons">
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>

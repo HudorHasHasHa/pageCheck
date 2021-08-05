@@ -1,0 +1,39 @@
+{ 
+  "small_images": {
+    "img1": "../photo/thumb-1.png",
+    "img2": "../photo/version-1.png",
+    "img3": "../photo/thumb-4.png",
+    "img4": "../photo/thumb-1.png",
+    "img5": "../photo/version-1.png"
+  },
+  "images": {
+    "img1": "/photo/photo_3b.png",
+    "img2": "/photo/photo_1.png",
+    "img3": "/photo/thumb-4Resized.png",
+    "img4": "/photo/photo_3b.png",
+    "img5": "/photo/photo_1.png"
+  },
+  "available": {
+    "item1": {
+      "id": "1",
+      "img": "/photo/version-1.png",
+      "title": "Bambusowe Naczynia dla Dzieci Ambition Junior Alex",
+      "quantity": "3",
+      "price": 29.0
+    },
+    "item2": {
+      "id": "2",
+      "img": "/photo/version-2.png",
+      "title": "Bambusowe Naczynia dla Dzieci Ambition Junior Alex",
+      "quantity": "3",
+      "price": 29.0
+    },
+    "item3": {
+      "id": "3",
+      "img": "/photo/version-3.png",
+      "title": "Bambusowe Naczynia dla Dzieci Ambition Junior Alex",
+      "quantity": "3",
+      "price": 29.0
+    }
+  }
+}
