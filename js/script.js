@@ -140,7 +140,7 @@ let AddToCart = ({ id, img, title, quantity, price }, requestQuantity) => {
   let html = `
   <li id="item-id-${id}" class="row cart-items-styles">
     <div class="col-md-4">
-      <span style="background: url(.${img}) no-repeat; background-size: 100%;" class="item-image"></span>
+      <span style="background: url(${'.'+img}) no-repeat; background-size: 100%;" class="item-image"></span>
     </div>
     <div class="col-md-8 cart-item-description">
       <span class="item-name row">${title}</span>
