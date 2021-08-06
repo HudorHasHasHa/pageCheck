@@ -89,7 +89,7 @@ let injectAvailableProducts = () => {
     // if(document.getElementById("item"+i+"-img").contains)
     // console.log(products.available[item].img);
     // console.log(document.getElementById("item" + products.available[item].id + "-img"));
-    document.getElementById("item" + products.available[item].id + "-img").setAttribute("style", "background-image: url(" + products.available[item].img + "); background-repeat: no-repeat");
+    document.getElementById("item" + products.available[item].id + "-img").setAttribute("style", "background-image: url("+'.' + products.available[item].img + "); background-repeat: no-repeat");
     document.getElementById("item" + products.available[item].id + "-title").innerHTML = products.available[item].title;
     document.getElementById("item" + products.available[item].id + "-quantity").innerHTML = products.available[item].quantity;
     document.getElementById("item" + products.available[item].id + "-price").innerHTML = products.available[item].price + "zł / szt.";
