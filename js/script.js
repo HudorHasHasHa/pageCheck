@@ -44,9 +44,12 @@ for (let i = 0; i < footer_links.length; i++) {
   });
 }
 
-
 // loading data from json file via axios package
-const response = await axios.get("https://raw.githubusercontent.com/HudorHasHasHa/pageCheck/master/products.json");
+// const response = await axios.get("https://raw.githubusercontent.com/HudorHasHasHa/pageCheck/master/products.json");
+const response = await axios.get("https://raw.githubusercontent.com/HudorHasHasHa/pageCheck/master/products.json")
+  .catch(error => {
+      console.log(error.response)
+  });
 // saving response data into const
 const products = response.data;
 // console.log(products);
