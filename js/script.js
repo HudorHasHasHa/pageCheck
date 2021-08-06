@@ -46,7 +46,7 @@ for (let i = 0; i < footer_links.length; i++) {
 
 
 // loading data from json file via axios package
-const response = await axios("pageCheck/products.json");
+const response = await axios("pageCheck/master/products.json");
 // saving response data into const
 const products = response.data;
 // console.log(products);
