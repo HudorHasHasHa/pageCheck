@@ -1383,6 +1383,15 @@ footer .logos .row .instagram {
     left: 120%;
     background-color: #F6F6F6;
   }
+  .package-section .package-content {
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+  }
+  .package-section .package-content {
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+    padding: 30px 0;
+  }
   .package-section .package-images .package-item-2 {
     top: 0;
   }
@@ -1399,9 +1408,6 @@ footer .logos .row .instagram {
   }
   .package-section .package-description .package-description-inner p {
     font-size: 1vw;
-  }
-  .package-section .package-content {
-    padding: 30px 0;
   }
   .description-section {
     -ms-flex-direction: row-reverse;
