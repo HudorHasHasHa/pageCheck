@@ -1275,6 +1275,10 @@ footer{
   }
 
   .package-section{
+    .package-content{
+      justify-content: flex-end;
+      padding: 30px 0;
+    }
     .package-images{
       .package-item-2{
         top:0 ; 
@@ -1297,12 +1301,6 @@ footer{
         }
       }
     }
-
-    .package-content{
-      justify-content: flex-end;
-      padding: 30px 0;
-    }
-
   }
 
   .description-section{
