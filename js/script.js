@@ -52,7 +52,7 @@ const response = await axios.get("https://raw.githubusercontent.com/HudorHasHasH
   });
 // saving response data into const
 const products = response.data;
-// console.log(products);
+console.log(products);
 
 for (let i = 0; i < gallery.length; i++) {
   gallery[i].addEventListener('click', function (event) {
